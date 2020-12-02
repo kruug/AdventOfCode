@@ -1,6 +1,7 @@
-inputFile = open('input.txt', 'r')
-inputLines = inputFile.readlines()
 inputNumbers = []
+
+with open('input.txt') as inputFile:
+  inputLines = inputFile.readlines()
 
 for inputs in inputLines:
   inputNumbers.append(inputs.strip())
@@ -11,7 +12,7 @@ answer = 0
 
 for inputOne in inputNumbers:
   for inputTwo in inputNumbers:
-    print("Inputs: ", inputOne, inputTwo)
+    #print("Inputs: ", inputOne, inputTwo)
     if (int(inputOne) + int(inputTwo) == 2020):
       answer = int(inputOne) * int(inputTwo)
       break

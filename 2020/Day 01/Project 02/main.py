@@ -1,6 +1,7 @@
-inputFile = open('input.txt', 'r')
-inputLines = inputFile.readlines()
 inputNumbers = []
+
+with open('input.txt') as inputFile:
+  inputLines = inputFile.readlines()
 
 for inputs in inputLines:
   inputNumbers.append(inputs.strip())
